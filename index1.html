@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.min.css">
+<link rel="stylesheet" href="index1.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <img src="image/Logo Max.png" class="logo">
+            <nav>
+                <h1 class="sub-title">Home</h1>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Software Engineer</p>
+                <h1>Hi I'm <span>Ebongue</span><br>Maxwell from Cameroon</h1>
+            </div>
+        </div>
+    </div>
+    <!---------------------------------------About----------------------------------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="image/IMG_1904.JPG">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am studious, hardworking personality,
+                        i'm a Cameroonian live in Douala. Devoted in personal and community development. I feel at my ease in front of a computer, writting programs, Editing Web Pages and learning new things, teaching and providing several services.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Front End Programing</span><br>Designing Web/App interfaces</li>
+                            <li><span> Software Engineering</span><br>Software Manager</li>
+                            <li><span> Development</span><br>Building Android/IOS App</li>
+                            <li><span>Driving</span><br>Good ability to drive cars of different sizes</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span> 2021-current</span><br>Designing Web/App interfaces trainning at IUC</li>
+                            <li><span> 2017-current</span><br>Web Marketting</li>
+                            <li><span> 2016-2017</span><br>intership at ActualUpStation</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span> 2023-Current</span><br>Studying at IUC Akwa</li>
+                            <li><span>2022</span><br>GCE A Level at GBHS Bojongo</li>
+                            <li><span> 2019</span><br>GCE O Level at GBHS Deido</li>
+                        </ul>
+                    </div>     
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------------------------------------Services-------------------------------- --->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title"> My Services</h1>
+            <div class="services-list">
+                <div>
+                  <i class="fa-solid fa-code"></i>  
+                    <h2>Web Designer</h2>
+                    <p>A competent team uplooking to ameliorate web designing.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-pen"></i>
+                    <h2>Teaching</h2>
+                    <p>I work with a group of young experienced and dynamic teachers who loves to give young ones the opportunity to learn new things either academics or profesionally.</p>
+                    <a href="#">A teacher for you.</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Designer</h2>
+                    <p>We design applications to give them a user friendly views for better interfaces and interactions.</p>
+                    <a href="#">Learn more</a>
+                 </div>
+                 <div>
+                    <i class="fa-solid fa-car"></i>
+                    <H2>Driving and and Car Renting</H2>
+                    <p>A range of car put at your dispositions for all your occassions the best and upgraded are for you.</p>
+                    <a href="#" >Rent a car</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-plane"></i>
+                    <h2>Air Tickets</h2>
+                    <p>Indeed air ticketting is the main activity we enroll ourselves in we wish you'll find your pleasant deal here.</p>
+                    <a href="https://www.toptraveltrip.com" target="_blank">Buy a flight</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ <!--------------------------------------------Portfolio---------------------------------------------------  -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title"> My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="image/IMG_2524.JPG"> 
+                    <div class="layer">
+                        <h3>Job Creation</h3>
+                        <p>We've a diverse number of website which help you to generate new job</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div> 
+                </div>
+                <div class="work">
+                    <img src="image/IMG_2525.JPG"> 
+                    <div class="layer">
+                        <h3>Studies</h3>
+                        <p>A young experienced generation of teachers put at the disposal of every person desiring to learn</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div> 
+                </div>
+                <div class="work">
+                    <img src="image/IMG_2523.PNG">
+                    <div class="layer">
+                        <h3>App Creation</h3>
+                        <p>Creating various apps for various utilities to serve a large public, suggestions are awaited for us to meet your satisfaction</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://jobs.com/" class="btn"> See more</a>
+         </div>
+ </div> 
+<!-------------------------------------------------------------Contact------------------------------------------- -->
+<div id="contact">
+    <div class="container"> 
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title"> Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i><a href="mailto:nsamemaxwell00@gmail.com">Send Email</a></p>
+                    <p><i class="fas fa-phone-square-alt"></i> <a href="tel:+237655182969">Call Me</a></p>
+                        <div class="social-icons">
+                            <a href="https://facebook.com/" target="_blank"> <i class="fab fa-facebook"></i></a>
+                            <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://whatsapp.com/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        </div> 
+                        <a href="image/My CV.pdf" download class="btn btn2">Download CV</a>
+        </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet"> 
+                    <input type="text" name="Name" placeholder=" Your Name" required>
+                    <input type="text" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder ="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg">hello</span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>It's<i class="fas fa-smile"></i> Ebonguemaxwell. All rights reserved.</p>
+    </div>
+</div>
+
+
+
+<script src="./script.js"></script>
+<script>
+   const scriptURL = 'https://script.google.com/macros/s/AKfycbyh4CAGp8lyE1C-qlFqkVLhR0xXKRQOA76k_i4BJ7hj1puIZ_aULqtkMV4HdY8G9x0XoQ/exec'
+ const form = document.forms['submit-to-google-sheet']
+ const msg = document.getElementById("msg")
+
+ form.addEventListener('submit', e => {
+   e.preventDefault()
+   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+     .then(response => {
+         msg.innerHTML = "Message Sent Successfully"
+         setTimeout(function(){
+             msg.innerHTML = ""
+         },5000)
+         form.reset()
+     })
+     .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>    

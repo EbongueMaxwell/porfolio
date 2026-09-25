@@ -11,15 +11,15 @@ export const profile = {
 
 export const experiences = [
   {
-    role: 'Chief of Data Department', company: 'NAUMUR SARL', location: 'Yaoundé', dates: 'Jun 2026 – Present', tag: 'Data & Monitoring',
+    role: 'Head of Data Department', company: 'NAUMUR SARL', location: 'Yaoundé', dates: 'Jun 2026 – Present', tag: 'Data & Monitoring',
     points: [
       'Contributing to the PADESCE national project as a Data Analyst, supporting monitoring and evaluation.',
       'Collecting, cleaning, preprocessing, analyzing, and reporting program data; developing dashboards, KPIs, and reports.',
-      'Maintaining data quality, accuracy, and reliability across CGA, PAAM, and Karaavel projects.',
+      'Maintaining data quality, accuracy, and reliability across PERLE, PAAM, and Karaavel projects.',
     ],
   },
   {
-    role: 'Chief of IT Department', company: 'NAUMUR SARL', location: 'Yaoundé', dates: 'Nov 2025 – Jun 2026', tag: 'IT, Analytics & Digital Solutions',
+    role: 'Head of IT Department', company: 'NAUMUR SARL', location: 'Yaoundé', dates: 'Nov 2025 – Jun 2026', tag: 'IT, Analytics & Digital Solutions',
     points: [
       'Oversaw data collection and organization, supporting the quality, accuracy, and reliability of business data.',
       'Turned data into dashboards, reports, and KPIs to inform strategic decisions.',

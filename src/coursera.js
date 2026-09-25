@@ -1,0 +1,27 @@
+const file = id => `/assets/certificates/Coursera ${id}.pdf`;
+
+export const courseraCertificates = [
+  { title: 'Google Data Analytics Professional Certificate', issuer: 'Google', date: 'September 18, 2026', id: '0DH3YSTEC3AV', kind: 'Professional Certificate', track: 'Analytics' },
+  { title: 'Foundations: Data, Data, Everywhere', issuer: 'Google', date: 'September 8, 2026', id: 'PKQ5IWHJS2LO', kind: 'Course Certificate', track: 'Analytics' },
+  { title: 'Ask Questions to Make Data-Driven Decisions', issuer: 'Google', date: 'September 9, 2026', id: '42KOX3WOTZ6F', kind: 'Course Certificate', track: 'Analytics' },
+  { title: 'Prepare Data for Exploration', issuer: 'Google', date: 'September 15, 2026', id: '4R2NV10A2O72', kind: 'Course Certificate', track: 'Analytics' },
+  { title: 'Process Data from Dirty to Clean', issuer: 'Google', date: 'September 15, 2026', id: 'VJ9G1C7JZACR', kind: 'Course Certificate', track: 'Analytics' },
+  { title: 'Analyze Data to Answer Questions', issuer: 'Google', date: 'September 16, 2026', id: 'R8OULWVZ3RVZ', kind: 'Course Certificate', track: 'Analytics' },
+  { title: 'Share Data Through the Art of Visualization', issuer: 'Google', date: 'September 17, 2026', id: '8WUOWKPX355N', kind: 'Course Certificate', track: 'Analytics' },
+  { title: 'Introduction to Data Analysis Using Python', issuer: 'Google', date: 'September 18, 2026', id: 'O0TKIOG2E8ZE', kind: 'Course Certificate', track: 'Analytics' },
+  { title: 'Google Data Analytics Capstone: Complete a Case Study', issuer: 'Google', date: 'September 18, 2026', id: 'U2AMJEXHGOZW', kind: 'Course Certificate', track: 'Analytics' },
+  { title: 'Google AI Professional Certificate', issuer: 'Google', date: 'September 22, 2026', id: 'VR0JK91XGZSV', kind: 'Professional Certificate', track: 'Artificial intelligence' },
+  { title: 'AI Fundamentals', issuer: 'Google', date: 'September 22, 2026', id: 'STDJ0ROU5O26', kind: 'Course Certificate', track: 'Artificial intelligence' },
+  { title: 'AI for Brainstorming and Planning', issuer: 'Google', date: 'September 22, 2026', id: 'YZ7SKLUEH4SF', kind: 'Course Certificate', track: 'Artificial intelligence' },
+  { title: 'AI for Research and Insights', issuer: 'Google', date: 'September 22, 2026', id: 'ZBRBKKS8KK81', kind: 'Course Certificate', track: 'Artificial intelligence' },
+  { title: 'AI for Data Analysis', issuer: 'Google', date: 'September 22, 2026', id: 'KK5VIZMPBUTM', kind: 'Course Certificate', track: 'Artificial intelligence' },
+  { title: 'AI for App Building', issuer: 'Google', date: 'September 22, 2026', id: 'LIO49R3F5F4V', kind: 'Course Certificate', track: 'Artificial intelligence' },
+  { title: 'AI for App Deployment', issuer: 'Google', date: 'September 22, 2026', id: 'W01XY2WYMZJR', kind: 'Course Certificate', track: 'Artificial intelligence' },
+  { title: 'AI for Content Creation', issuer: 'Google', date: 'September 22, 2026', id: 'BN7JHCKSVSO0', kind: 'Course Certificate', track: 'Artificial intelligence' },
+  { title: 'AI for Writing and Communicating', issuer: 'Google', date: 'September 22, 2026', id: 'ESUH9FTN5XEW', kind: 'Course Certificate', track: 'Artificial intelligence' },
+  { title: 'Accelerate Your Job Search with AI', issuer: 'Google', date: 'September 18, 2026', id: 'S30MGQZY3O52', kind: 'Course Certificate', track: 'Artificial intelligence' },
+  { title: 'IoT (Internet of Things) Wireless & Cloud Computing Emerging Technologies', issuer: 'Yonsei University', date: 'September 25, 2025', id: '2HMS4SC191OT', kind: 'Course Certificate', track: 'Cloud & IoT' },
+  { title: 'Excel Fundamentals for Data Analysis', issuer: 'Macquarie University', date: 'October 2, 2025', id: 'RIPKRPA75RDT', kind: 'Course Certificate', track: 'Productivity' },
+  { title: 'Getting Started with Microsoft Word', issuer: 'Coursera', date: 'September 24, 2025', id: 'G9BA796UM008', kind: 'Guided Project', track: 'Productivity' },
+  { title: 'Getting Started with Microsoft Office 365', issuer: 'Coursera', date: 'September 25, 2025', id: 'BW4W1VH7EPP1', kind: 'Guided Project', track: 'Productivity' },
+].map(certificate => ({ ...certificate, url: file(certificate.id) }));

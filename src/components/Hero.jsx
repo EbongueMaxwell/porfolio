@@ -15,7 +15,7 @@ export default function Hero() {
         <div className="hero-meta"><span><i className="pin-dot"></i>{profile.location}</span><span className="meta-divider"></span><a href={`mailto:${profile.email}`}>{profile.email}</a></div>
       </div>
       <div className="hero-visual" aria-label="Portrait and analytics illustration">
-        <div className="visual-orbit orbit-one"></div><div className="visual-orbit orbit-two"></div>
+        <img className="hero-illustration" src="/assets/illustrations/data-orbit.svg" alt="" aria-hidden="true" />
         <div className="portrait-frame"><img src="/assets/image/IMG_1904.JPG" alt="Portrait of Maxwell Ebongue" /></div>
         <div className="visual-label label-top"><span className="label-icon">⌁</span><span>DATA<br /><b>WITH PURPOSE</b></span></div>
         <div className="visual-label label-bottom"><span className="spark-bars"><i></i><i></i><i></i><i></i><i></i></span><span>INSIGHT<br /><b>IN MOTION</b></span></div>

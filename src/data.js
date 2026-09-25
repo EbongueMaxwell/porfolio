@@ -60,6 +60,15 @@ export const certifications = [
   { title: 'Microsoft Office Specialist: Excel Associate (Office 2019)', issuer: 'Microsoft', image: '/assets/certificates/microsoft-office-specialist-excel-associate-office-2019.png' },
 ];
 
+export const credlyBadges = [
+  'dbaa264e-3f95-4ee6-8433-afcaafab4959',
+  '55b759c7-1667-4c7f-8511-7c114f34c9aa',
+  'f26ce0a8-3b41-42fd-8913-fc7d0842b232',
+  'f0b20938-5bc2-40f3-9e40-df8787146d3d',
+  '8dfc2558-d9a0-4b73-875a-e11aa471664e',
+  '4cf75ca7-be3e-42e3-aa97-a0d8b97b9ef9',
+].map(id => ({ id, url: `https://www.credly.com/badges/${id}/public_url` }));
+
 export const projects = [
   {
     number: '01', type: 'DATA ANALYTICS · MONITORING & EVALUATION', title: 'PADESCE',

@@ -1,8 +1,9 @@
 import { useState } from 'react';
+import ThemeToggle from './ThemeToggle.jsx';
 
 const links = [
-  ['About', '#about'], ['Experience', '#experience'], ['Skills', '#skills'],
-  ['Projects', '#projects'], ['Credentials', '#certifications'], ['Contact', '#contact'],
+  ['About', '#about'], ['Experience', '#experience'], ['Education', '#education'],
+  ['Skills', '#skills'], ['Projects', '#projects'], ['Credentials', '#certifications'], ['Resume', '#resume'],
 ];
 
 export default function Navbar() {
@@ -13,6 +14,7 @@ export default function Navbar() {
       <button className="menu-toggle" aria-label={open ? 'Close navigation' : 'Open navigation'} aria-expanded={open} onClick={() => setOpen(!open)}><span></span><span></span></button>
       <nav className={open ? 'nav-links is-open' : 'nav-links'} aria-label="Main navigation">
         {links.map(([label, href]) => <a key={href} href={href} onClick={() => setOpen(false)}>{label}</a>)}
+        <ThemeToggle />
         <a className="nav-cta" href="#contact" onClick={() => setOpen(false)}>Let’s talk <span>↗</span></a>
       </nav>
     </div>

@@ -3,7 +3,7 @@ import { profile } from '../data.js';
 export default function Hero() {
   return <section className="hero" id="home">
     <div className="hero-grid container">
-      <div className="hero-copy">
+      <div className="hero-copy" data-reveal>
         <div className="eyebrow">DATA & IT PROFESSIONAL <span className="eyebrow-rule"></span> CAMEROON</div>
         <h1>Turning data<br />into <em>direction.</em></h1>
         <p className="hero-title">{profile.title} <span>·</span> Cloud Computing</p>
@@ -14,7 +14,7 @@ export default function Hero() {
         </div>
         <div className="hero-meta"><span><i className="pin-dot"></i>{profile.location}</span><span className="meta-divider"></span><a href={`mailto:${profile.email}`}>{profile.email}</a></div>
       </div>
-      <div className="hero-visual" aria-label="Portrait and analytics illustration">
+      <div className="hero-visual" data-reveal aria-label="Portrait and analytics illustration">
         <img className="hero-illustration" src="/assets/illustrations/data-orbit.svg" alt="" aria-hidden="true" />
         <div className="portrait-frame"><img src="/assets/image/IMG_1904.JPG" alt="Portrait of Maxwell Ebongue" /></div>
         <div className="visual-label label-top"><span className="label-icon">⌁</span><span>DATA<br /><b>WITH PURPOSE</b></span></div>

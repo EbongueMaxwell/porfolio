@@ -2,7 +2,7 @@ export const profile = {
   name: 'Ebongue Nsame Elie Maxwell',
   firstName: 'Maxwell',
   title: 'Data & IT Professional',
-  location: 'Yaoundé, Cameroon',
+  location: 'Nkolfoulou, Yaoundé, Cameroon',
   phone: '+237 655 182 969',
   email: 'nsamemaxwell00@gmail.com',
   linkedin: 'https://www.linkedin.com/in/elie-maxwell-ebongue-nsame-666798302/',
@@ -29,7 +29,7 @@ export const experiences = [
 ];
 
 export const education = [
-  { credential: 'Bachelor of Technology (BTech)', field: 'Computer Science Engineering', school: 'Institut Universitaire de la Côte', location: 'Douala', year: '2025' },
+  { credential: 'Bachelor of Technology (BTech)', field: 'Computer Science Engineering', school: 'Institut Universitaire de la Côte', location: 'Douala', year: '2025', relevant: 'Cloud Computing background' },
   { credential: 'Advanced Level', field: 'Sciences', school: 'G B H S Bojongo', location: 'Douala', year: '2022' },
   { credential: 'Ordinary Level', field: 'Sciences', school: 'G B H S Deido', location: 'Douala', year: '2019' },
 ];

@@ -345,10 +345,30 @@ img { display: block; max-width: 100%; }
   .other-credentials { margin-top: 61px; }
 }
 .credly-group { margin-top: 58px; }
+
+.other-credential-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 13px; }
+.other-credential-card { color: var(--ink); font: inherit; text-decoration: none; position: relative; min-height: 154px; display: grid; grid-template-columns: 92px minmax(0,1fr); align-items: center; gap: 17px; padding: 15px; background: #fff; border: 1px solid var(--line); transition: transform .2s ease, box-shadow .2s ease; }
+.other-credential-card:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(26,48,34,.08); }
+.other-credential-image { height: 116px; display: grid; place-items: center; overflow: hidden; background: #f0f4f0; }
+.other-credential-image img { width: 100%; height: 100%; object-fit: contain; }
+.other-credential-image > span { display: grid; width: 58px; height: 58px; place-items: center; border: 1px solid #b8cabb; border-radius: 50%; color: #42674d; background: #e4eee5; font: 700 17px var(--display); }
+.other-credential-copy > span { color: #62806a; font: 8px var(--mono); letter-spacing: .1em; }
+.other-credential-copy h4 { margin: 8px 0 0; font-family: var(--display); font-size: 14px; line-height: 1.45; }
+.other-credential-open { display: inline-block; margin-top: 10px; color: #52745b; font-size: 10px; font-weight: 700; }
+.other-credential-card:hover .other-credential-open { text-decoration: underline; text-underline-offset: 3px; }
+.other-credential-index { position: absolute; right: 12px; bottom: 10px; color: #97a69a; font: 8px var(--mono); }
+.credly-track { margin-top: 28px; }
+.credly-track > h4 { margin: 0 0 13px; color: var(--muted); font: 9px var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+.credly-grid { grid-template-columns: repeat(auto-fit, minmax(205px, 1fr)); }
+@media (max-width: 900px) { .other-credential-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (max-width: 640px) { .other-credential-grid { grid-template-columns: 1fr; } .other-credential-card { min-height: 132px; grid-template-columns: 82px minmax(0,1fr); } .other-credential-image { height: 100px; } }
+
 .credly-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(205px, 1fr)); justify-items: center; gap: 15px; }
 .credly-card { width: 100%; max-width: 265px; min-height: 326px; padding: 12px 10px 10px; display: flex; flex-direction: column; align-items: center; border: 1px solid #dce2dd; background: #fff; }
 .credly-card-heading { width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0 5px 9px; color: #374d3e; font-family: var(--display); font-size: 11px; font-weight: 800; }
 .credly-card-heading i { color: #5380b2; font-size: 8px; font-style: normal; vertical-align: 2px; }
+.credly-badge-title { width: 100%; margin: 0; padding: 2px 5px 0; color: #24372a; font-family: var(--display); font-size: 13px; line-height: 1.4; text-align: center; }
+.credly-badge-issuer { margin: 4px 0 6px; color: #718075; font-size: 9px; text-align: center; }
 .credly-card-heading small { color: #8a968d; font: 7px var(--mono); letter-spacing: .04em; }
 .credly-embed { width: 150px; min-height: 270px; display: flex; justify-content: center; }
 .credly-embed iframe { max-width: 100%; border: 0; }
@@ -490,18 +510,22 @@ img { display: block; max-width: 100%; }
 :root[data-theme="dark"] .projects-section, :root[data-theme="dark"] .resume-section { background: #18241c; }
 :root[data-theme="dark"] .section-number, :root[data-theme="dark"] .card-num { color: #aab9ad; }
 :root[data-theme="dark"] .about-main, :root[data-theme="dark"] .about-main .about-lead, :root[data-theme="dark"] .about-card h3, :root[data-theme="dark"] .skill-card h3, :root[data-theme="dark"] .project-content h3, :root[data-theme="dark"] .education-item h3 { color: #edf3ee; }
-:root[data-theme="dark"] .about-card, :root[data-theme="dark"] .skill-card, :root[data-theme="dark"] .project-card, :root[data-theme="dark"] .cert-card, :root[data-theme="dark"] .coursera-card, :root[data-theme="dark"] .coursera-count, :root[data-theme="dark"] .credly-card, :root[data-theme="dark"] .resume-preview { color: var(--ink); background: #1e2b22; border-color: #3a4d3e; }
+:root[data-theme="dark"] .other-credential-card, :root[data-theme="dark"] .about-card, :root[data-theme="dark"] .skill-card, :root[data-theme="dark"] .project-card, :root[data-theme="dark"] .cert-card, :root[data-theme="dark"] .coursera-card, :root[data-theme="dark"] .coursera-count, :root[data-theme="dark"] .credly-card, :root[data-theme="dark"] .resume-preview { color: var(--ink); background: #1e2b22; border-color: #3a4d3e; }
 :root[data-theme="dark"] .about-card p, :root[data-theme="dark"] .about-main, :root[data-theme="dark"] .company-line, :root[data-theme="dark"] .experience-body li, :root[data-theme="dark"] .experience-note, :root[data-theme="dark"] .project-description, :root[data-theme="dark"] .project-contribution, :root[data-theme="dark"] .education-item p, :root[data-theme="dark"] .education-item div > span, :root[data-theme="dark"] .resume-copy > p:not(.kicker) { color: #bdc9bf; }
 :root[data-theme="dark"] .experience-list, :root[data-theme="dark"] .experience-card, :root[data-theme="dark"] .education-list, :root[data-theme="dark"] .education-item, :root[data-theme="dark"] .other-credentials-title { border-color: #3a4d3e; }
 :root[data-theme="dark"] .pill { color: #bfd4c3; border-color: #506b56; }
 :root[data-theme="dark"] .skill-icon, :root[data-theme="dark"] .skill-tags span, :root[data-theme="dark"] .project-tags span { color: #c5d7c8; background: #2b3c30; }
-:root[data-theme="dark"] .cert-copy h3, :root[data-theme="dark"] .coursera-card h3 { color: #f0f4f0; }
+:root[data-theme="dark"] .cert-copy h3, :root[data-theme="dark"] .other-credential-copy h4, :root[data-theme="dark"] .coursera-card h3 { color: #f0f4f0; }
 :root[data-theme="dark"] .cert-copy p, :root[data-theme="dark"] .coursera-issuer, :root[data-theme="dark"] .coursera-date time, :root[data-theme="dark"] .coursera-kind, :root[data-theme="dark"] .visible-count, :root[data-theme="dark"] .credential-id { color: #b4c2b7; }
 :root[data-theme="dark"] .coursera-card-foot { border-color: #3a4d3e; }
 :root[data-theme="dark"] .filter-button { color: #d5dfd7; border-color: #4a5e4e; }
 :root[data-theme="dark"] .filter-button:hover, :root[data-theme="dark"] .filter-button.active { color: white; background: #1d62c4; }
 :root[data-theme="dark"] .featured-certificate { color: #edf4ee; background: linear-gradient(110deg,#203b2a,#1d2c22); border-color: #45604a; }
 :root[data-theme="dark"] .featured-cert-copy > p:not(.kicker), :root[data-theme="dark"] .featured-cert-meta { color: #c3d1c5; }
+:root[data-theme="dark"] .other-credential-image { background: #26372b; }
+:root[data-theme="dark"] .other-credential-image > span { color: #d9e9dc; background: #304834; border-color: #59745f; }
+:root[data-theme="dark"] .credly-badge-title { color: #edf3ee; }
+:root[data-theme="dark"] .credly-badge-issuer { color: #b4c2b7; }
 :root[data-theme="dark"] .resume-preview summary { color: #edf3ee; }
 :root[data-theme="dark"] .resume-frame-wrap { background: #dce2dd; }
 :root[data-theme="dark"] .button-secondary { color: #edf3ee; border-color: #657b69; }
@@ -560,3 +584,134 @@ img { display: block; max-width: 100%; }
 .featured-certificates .featured-cert-mark { width: 55px; height: 55px; font-size: 19px; }
 @media (max-width: 900px) { .featured-certificates { grid-template-columns: 1fr; } .featured-certificates .featured-certificate { grid-template-columns: 62px minmax(0,1fr) auto; } .featured-certificates .featured-cert-link { grid-column: 3; grid-row: 1; align-self: center; } }
 @media (max-width: 640px) { .featured-certificates .featured-certificate { grid-template-columns: 48px minmax(0,1fr); gap: 12px; padding: 18px 15px; } .featured-certificates .featured-cert-mark { width: 48px; height: 48px; } .featured-certificates .featured-cert-copy h3 { font-size: 18px; } .featured-certificates .featured-cert-link { grid-column: 1 / -1; grid-row: auto; } }
+
+/* LinkedIn certification carousel */
+.linkedin-certifications { overflow: hidden; }
+.linkedin-certifications-heading { align-items: end; }
+.certifications-heading-aside { max-width: 420px; padding-bottom: 4px; }
+.certifications-heading-aside p { margin: 0 0 14px; color: var(--muted); font-size: 13px; line-height: 1.75; }
+.certifications-heading-aside a { display: inline-flex; align-items: center; gap: 8px; color: var(--green-dark); font-size: 12px; font-weight: 700; }
+.certifications-heading-aside a span { transition: transform .2s; }
+.certifications-heading-aside a:hover span { transform: translate(2px,-2px); }
+.credential-showcase { padding: 22px 0 17px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.showcase-topline, .showcase-controls { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.showcase-topline { padding: 0 3px 17px; color: #849087; font: 9px var(--mono); letter-spacing: .11em; }
+.showcase-topline i { margin: 0 5px; color: var(--green); font-style: normal; }
+.credential-carousel { --credential-slide-width: clamp(300px, 32vw, 420px); overflow-x: auto; overflow-y: hidden; scrollbar-width: none; scroll-snap-type: x mandatory; scroll-behavior: smooth; overscroll-behavior-inline: contain; outline: none; }
+.credential-carousel::-webkit-scrollbar { display: none; }
+.credential-carousel.is-dragging { cursor: grabbing; scroll-snap-type: none; user-select: none; }
+.credential-carousel.is-dragging .credential-slide { cursor: grabbing; }
+.credential-carousel:focus-visible { outline: 2px solid #7eae8a; outline-offset: 4px; }
+.credential-carousel-track { display: flex; align-items: stretch; gap: 16px; width: max-content; min-width: 100%; padding: 12px calc((100% - var(--credential-slide-width)) / 2) 25px; box-sizing: border-box; }
+.credential-slide { flex: 0 0 var(--credential-slide-width); min-width: 0; min-height: 310px; display: flex; flex-direction: column; align-items: flex-start; padding: 20px 21px; color: #203127; text-align: left; border: 1px solid #dce5de; border-radius: 8px; background: linear-gradient(145deg,#fff 15%,#f4f8f4 100%); box-shadow: 0 9px 24px rgba(25,49,33,.055); cursor: pointer; scroll-snap-align: center; transition: transform .38s ease, border-color .38s ease, box-shadow .38s ease, opacity .38s ease, filter .38s ease; }
+.credential-slide:hover { transform: translateY(-5px); border-color: #9eb8a3; box-shadow: 0 17px 36px rgba(25,49,33,.12); }
+.credential-slide:not(.is-selected) { opacity: .76; filter: saturate(.72); transform: scale(.965); }
+.credential-slide.is-selected { z-index: 1; transform: scale(1.015); border-color: #63876a; box-shadow: 0 17px 38px rgba(41,82,52,.17); }
+.credential-slide:focus-visible { outline: 3px solid #7eae8a; outline-offset: 3px; }
+.credential-slide-top { width: 100%; display: flex; justify-content: space-between; gap: 10px; color: #728177; font: 8px var(--mono); letter-spacing: .05em; text-transform: uppercase; }
+.credential-slide-top span:last-child { text-align: right; }
+.credential-slide-mark { width: 58px; height: 58px; display: grid; place-items: center; margin: 24px 0 17px; color: #fff; border-radius: 50%; background: linear-gradient(145deg,#365f42,#78997b); box-shadow: inset 0 0 0 1px rgba(255,255,255,.25), 0 6px 14px rgba(38,77,48,.17); font: 700 22px var(--display); transition: transform .3s ease; }
+.credential-slide:hover .credential-slide-mark, .credential-slide.is-selected .credential-slide-mark { transform: scale(1.08); }
+.credential-slide-issuer { color: #63806a; font-size: 10px; font-weight: 700; }
+.credential-slide-title { margin-top: 8px; color: #203127; font: 700 clamp(16px,1.55vw,21px)/1.38 var(--display); letter-spacing: -.03em; }
+.credential-slide-date { margin-top: 12px; color: #77837a; font-size: 10px; }
+.credential-slide-action { display: flex; justify-content: space-between; width: 100%; margin-top: auto; padding-top: 18px; color: #42684a; font-size: 10px; font-weight: 700; }
+.credential-slide-action b { transition: transform .2s; }
+.credential-slide:hover .credential-slide-action b { transform: translate(2px,-2px); }
+.showcase-controls { min-height: 39px; padding: 0 3px; }
+.showcase-arrows { display: flex; gap: 8px; }
+.showcase-arrows button, .credential-preview-header > button { width: 36px; height: 36px; display: grid; place-items: center; color: var(--ink); border: 1px solid var(--line); border-radius: 50%; background: transparent; cursor: pointer; font-size: 18px; transition: transform .2s, color .2s, background .2s, border-color .2s; }
+.showcase-arrows button:hover, .credential-preview-header > button:hover { transform: translateY(-2px); color: white; border-color: #426a4a; background: #426a4a; }
+.showcase-dots { display: flex; justify-content: center; gap: 5px; max-width: 58%; overflow: auto; scrollbar-width: none; padding: 8px; }
+.showcase-dots button { flex: 0 0 7px; width: 7px; height: 7px; padding: 0; border: 0; border-radius: 99px; background: #cbd4cd; cursor: pointer; transition: width .25s, background .25s; }
+.showcase-dots button.active { width: 21px; background: #527b5a; }
+.showcase-autoplay { color: #8b978e; font: 8px var(--mono); letter-spacing: .08em; text-align: right; }
+.credential-detail { display: flex; align-items: center; justify-content: space-between; gap: 28px; margin-top: 19px; padding: 24px 26px; border: 1px solid #dce5de; border-left: 3px solid #5a805f; border-radius: 5px; background: linear-gradient(110deg,#eef4ef,#fafcf9); animation: credential-detail-in .38s ease both; }
+@keyframes credential-detail-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.credential-detail-main { min-width: 0; }
+.credential-detail-main .kicker { margin-bottom: 6px; }
+.credential-detail h3 { margin: 0; color: #203127; font: 700 clamp(18px,2vw,25px)/1.35 var(--display); letter-spacing: -.035em; }
+.credential-detail-description { max-width: 760px; margin: 8px 0 10px; color: #617066; font-size: 12px; line-height: 1.65; }
+.credential-detail-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; color: #607669; font-size: 10px; }
+.credential-detail-meta i { color: #a1ada4; font-style: normal; }
+.credential-detail-id { font-family: var(--mono); font-size: 9px; }
+.credential-detail-link { flex: 0 0 auto; white-space: nowrap; }
+.linkedin-certifications .other-credentials { margin-top: 68px; }
+.linkedin-certifications .other-credential-card { min-height: 200px; grid-template-columns: 120px minmax(0,1fr); padding: 18px; border-radius: 7px; text-align: left; cursor: pointer; }
+.linkedin-certifications .other-credential-image { width: 120px; height: 155px; border-radius: 3px; }
+.linkedin-certifications .other-credential-image img { object-fit: contain; }
+.linkedin-certifications .other-credential-copy { display: flex; flex-direction: column; align-items: flex-start; }
+.linkedin-certifications .other-credential-copy strong { margin-top: 8px; color: var(--ink); font: 700 16px/1.45 var(--display); }
+.linkedin-certifications .other-credential-open { margin-top: 12px; }
+.credential-preview-open { overflow: hidden; }
+.credential-preview-backdrop { position: fixed; z-index: 1000; inset: 0; display: grid; place-items: center; padding: 24px; background: rgba(11,20,14,.78); backdrop-filter: blur(7px); animation: credential-backdrop-in .24s ease both; }
+@keyframes credential-backdrop-in { from { opacity: 0; } to { opacity: 1; } }
+.credential-preview-dialog { width: min(900px,100%); max-height: min(92vh,1100px); display: flex; flex-direction: column; padding: 20px; border: 1px solid rgba(255,255,255,.2); border-radius: 8px; background: var(--paper); box-shadow: 0 28px 90px rgba(0,0,0,.38); animation: credential-dialog-in .35s cubic-bezier(.2,.75,.25,1) both; }
+@keyframes credential-dialog-in { from { opacity: 0; transform: scale(.96) translateY(10px); } to { opacity: 1; transform: scale(1) translateY(0); } }
+.credential-preview-header { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding-bottom: 16px; }
+.credential-preview-header .kicker { margin-bottom: 4px; }
+.credential-preview-header h3 { margin: 0; color: var(--ink); font: 700 17px/1.4 var(--display); }
+.credential-preview-image { min-height: 0; overflow: auto; display: grid; place-items: center; padding: 10px; border-radius: 4px; background: rgba(128,145,132,.1); }
+.credential-preview-image img { max-width: 100%; max-height: calc(92vh - 125px); width: auto; height: auto; object-fit: contain; }
+:root[data-theme="dark"] .credential-slide { color: #edf3ee; border-color: #3a4d3e; background: linear-gradient(145deg,#1e2b22,#18241c); }
+:root[data-theme="dark"] .credential-slide-title, :root[data-theme="dark"] .credential-detail h3 { color: #edf3ee; }
+:root[data-theme="dark"] .credential-detail { border-color: #3a4d3e; border-left-color: #83ab89; background: linear-gradient(110deg,#203328,#1b2920); }
+:root[data-theme="dark"] .credential-detail-description, :root[data-theme="dark"] .credential-detail-meta { color: #c3d1c5; }
+:root[data-theme="dark"] .linkedin-certifications .other-credential-copy strong { color: var(--ink); }
+@media (max-width: 900px) {
+  .credential-carousel { --credential-slide-width: min(420px, calc(50vw - 38px)); }
+  .credential-slide { min-height: 300px; }
+  .linkedin-certifications .other-credential-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .linkedin-certifications-heading { gap: 24px; }
+  .certifications-heading-aside { max-width: 340px; }
+}
+@media (max-width: 640px) {
+  .linkedin-certifications-heading { display: block; }
+  .certifications-heading-aside { margin-top: 18px; }
+  .credential-showcase { padding-top: 18px; }
+  .credential-carousel { --credential-slide-width: 88vw; }
+  .credential-carousel-track { gap: 12px; }
+  .credential-slide { min-height: 285px; padding: 18px; }
+  .credential-slide-title { font-size: 19px; }
+  .showcase-controls { flex-wrap: wrap; }
+  .showcase-dots { order: 3; flex: 1 0 100%; max-width: none; }
+  .credential-detail { align-items: flex-start; flex-direction: column; gap: 18px; padding: 19px 17px; }
+  .credential-detail-link { align-self: flex-start; }
+  .linkedin-certifications .other-credential-grid { grid-template-columns: 1fr; }
+  .linkedin-certifications .other-credential-card { min-height: 154px; grid-template-columns: 92px minmax(0,1fr); padding: 13px; }
+  .linkedin-certifications .other-credential-image { width: 92px; height: 124px; }
+  .showcase-autoplay { font-size: 7px; }
+  .credential-preview-backdrop { padding: 10px; }
+  .credential-preview-dialog { padding: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .credential-carousel { scroll-behavior: auto; }
+  .credential-slide, .credential-slide-mark, .showcase-arrows button, .credential-preview-header > button { transition: none; }
+  .credential-detail, .credential-preview-backdrop, .credential-preview-dialog { animation: none; }
+}
+.credly-certifications .section-heading { align-items: end; }
+.credly-section-intro { max-width: 360px; margin: 0 0 4px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.credly-certifications .credly-track > h3 { margin: 0 0 14px; color: var(--muted); font: 10px var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+@media (max-width: 640px) { .credly-certifications .section-heading { display: block; } .credly-section-intro { margin-top: 17px; } }
+.credential-slide { min-height: 455px; background: linear-gradient(145deg,#fbfdfb 0%,#e7f1e8 48%,#cedfd1 100%); }
+.credential-slide:hover { background: linear-gradient(145deg,#ffffff 0%,#deefdf 48%,#c2dcc7 100%); }
+.credential-slide.is-selected { border-color: #4e7957; background: linear-gradient(145deg,#fafffa 0%,#d8ebda 46%,#b8d6be 100%); }
+.credential-slide-preview { width: 100%; height: 238px; display: grid; place-items: center; overflow: hidden; margin: 18px 0 16px; padding: 8px; border: 1px solid rgba(74,111,81,.16); border-radius: 4px; background: linear-gradient(135deg,#fff 0%,#f5f8f4 100%); box-shadow: 0 5px 14px rgba(30,58,36,.08); }
+.credential-slide-preview img { display: block; width: auto; max-width: 100%; height: 100%; object-fit: contain; filter: none; }
+:root[data-theme="dark"] .credential-slide { background: linear-gradient(145deg,#25372a 0%,#304936 50%,#405d45 100%); }
+:root[data-theme="dark"] .credential-slide.is-selected { background: linear-gradient(145deg,#293d2e 0%,#38563d 50%,#4d6e52 100%); }
+@media (max-width: 900px) { .credential-slide { min-height: 440px; } .credential-slide-preview { height: 225px; } }
+@media (max-width: 640px) { .credential-slide { min-height: 430px; } .credential-slide-preview { height: 230px; } }
+/* Image-led LinkedIn certificate carousel */
+.credential-slide { min-height: 470px; align-items: stretch; justify-content: center; padding: 12px; background: linear-gradient(145deg,#fcfefc 0%,#e4f0e6 48%,#c6dccb 100%); }
+.credential-slide:not(.is-selected) { opacity: .68; filter: saturate(.78); }
+.credential-slide.is-selected { opacity: 1; filter: none; border-color: #4e7957; background: linear-gradient(145deg,#ffffff 0%,#d9ebdc 48%,#b7d5bd 100%); }
+.credential-slide-preview { flex: 1; width: 100%; height: 430px; margin: 0; padding: 8px; background: linear-gradient(135deg,#ffffff,#f6f9f6); }
+.credential-slide-preview img { width: 100%; max-width: 100%; height: 100%; object-fit: contain; transition: transform .35s ease; }
+.credential-slide:hover .credential-slide-preview img, .credential-slide.is-selected .credential-slide-preview img { transform: scale(1.015); }
+.showcase-controls { justify-content: center; }
+.showcase-dots { max-width: 76%; }
+:root[data-theme="dark"] .credential-slide { background: linear-gradient(145deg,#25372a 0%,#304936 50%,#405d45 100%); }
+:root[data-theme="dark"] .credential-slide.is-selected { background: linear-gradient(145deg,#293d2e 0%,#38563d 50%,#4d6e52 100%); }
+@media (max-width: 900px) { .credential-slide { min-height: 450px; } .credential-slide-preview { height: 410px; } }
+@media (max-width: 640px) { .credential-slide { min-height: 440px; padding: 10px; } .credential-slide-preview { height: 410px; } }

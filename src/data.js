@@ -60,14 +60,33 @@ export const certifications = [
   { title: 'Microsoft Office Specialist: Excel Associate (Office 2019)', issuer: 'Microsoft', image: '/assets/certificates/microsoft-office-specialist-excel-associate-office-2019.png' },
 ];
 
+export const linkedinLearningCertificates = [
+  { title: 'What Is Generative AI?', issuer: 'LinkedIn Learning', date: 'October 26, 2025', kind: 'Course Certificate', track: 'Artificial intelligence', description: 'Introductory learning on generative AI, AI tools, and practical uses of generative AI.', id: '8ad8c900d5d93ea39ced773ac77e7ee0b90a2a5659847fdd9e0fafc799856429', url: '/assets/certificates/linkedin/what-is-generative-ai.pdf', preview: '/assets/certificates/linkedin/previews/what-is-generative-ai-preview.png' },
+  { title: 'Generative AI: The Evolution of Thoughtful Online Search', issuer: 'LinkedIn Learning', date: 'October 28, 2025', kind: 'Course Certificate', track: 'Artificial intelligence', description: 'Explores generative AI, search engine technology, and artificial intelligence for business.', id: '60b4115cf4ad2f1cde965541230424377f016967865325a64ce05c5ee6254dc9', url: '/assets/certificates/linkedin/generative-ai-thoughtful-search.pdf', preview: '/assets/certificates/linkedin/previews/generative-ai-thoughtful-search-preview.png' },
+  { title: 'Streamlining Your Work with Microsoft Copilot', issuer: 'LinkedIn Learning', date: 'October 28, 2025', kind: 'Course Certificate', track: 'Artificial intelligence', description: 'Covers Microsoft Copilot, AI productivity, and artificial intelligence for business.', id: '163b1c4631497d68fa1ad512a6dc527dd4e7ba0f316ddf098dab683d3c5fe047', url: '/assets/certificates/linkedin/streamlining-work-with-copilot.pdf', preview: '/assets/certificates/linkedin/previews/streamlining-work-with-copilot-preview.png' },
+  { title: 'Learning Microsoft 365 Copilot for Work (2024)', issuer: 'LinkedIn Learning', date: 'October 28, 2025', kind: 'Course Certificate', track: 'Artificial intelligence', description: 'Covers Microsoft Copilot, Office 365, and artificial intelligence.', id: 'b51239bc0301c5559caed5a5354c47dda7467846e8f5c42a434dcc670731a308', url: '/assets/certificates/linkedin/learning-microsoft-365-copilot.pdf', preview: '/assets/certificates/linkedin/previews/learning-microsoft-365-copilot-preview.png' },
+  { title: 'Ethics in the Age of Generative AI', issuer: 'LinkedIn Learning', date: 'October 28, 2025', kind: 'Course Certificate', track: 'Responsible AI', description: 'Covers computer ethics, generative AI, and responsible AI.', id: '12937c7c69b2490dea1ba0387120e85b28a11e5fc2c62d03dab2f61019be2a5d', url: '/assets/certificates/linkedin/ethics-in-generative-ai.pdf', preview: '/assets/certificates/linkedin/previews/ethics-in-generative-ai-preview.png' },
+  { title: 'Ethics in the Age of Generative AI', issuer: 'PMI® Registered Education Provider', date: 'October 28, 2025', kind: 'PMI® Education Certificate', track: 'Responsible AI', description: 'Ethics learning in generative AI, with 0.50 PDUs / contact hours recorded by PMI®.', id: 'cadbbe2f8cc925868eacc0299038a79e3878b5ae323948b39faf57bf0eb45a52', url: '/assets/certificates/linkedin/ethics-in-generative-ai-pmi.pdf', preview: '/assets/certificates/linkedin/previews/ethics-in-generative-ai-pmi-preview.png' },
+  { title: 'Introduction to Artificial Intelligence', issuer: 'LinkedIn Learning', date: 'October 29, 2025', kind: 'Course Certificate', track: 'Artificial intelligence', description: 'Covers AI literacy and artificial intelligence.', id: '9cf5b6dbe9ea9ebc936a7fac758db20c520c6435e90d60a5ab4bdc034c05e227', url: '/assets/certificates/linkedin/introduction-to-artificial-intelligence.pdf', preview: '/assets/certificates/linkedin/previews/introduction-to-artificial-intelligence-preview.png' },
+  { title: 'Career Essentials in Generative AI by Microsoft and LinkedIn', issuer: 'Microsoft · LinkedIn Learning', date: 'October 29, 2025', kind: 'Learning Path Certificate', track: 'Artificial intelligence', description: 'A learning path covering Microsoft Copilot, generative AI, and responsible AI.', id: 'f2bf60ad261bd8bf0e62174c065ebea6b9b19ce65b3370019e7a000d992996fb', url: '/assets/certificates/linkedin/career-essentials-generative-ai.pdf', preview: '/assets/certificates/linkedin/previews/career-essentials-generative-ai-preview.png' },
+];
+
 export const credlyBadges = [
-  'dbaa264e-3f95-4ee6-8433-afcaafab4959',
-  '55b759c7-1667-4c7f-8511-7c114f34c9aa',
-  'f26ce0a8-3b41-42fd-8913-fc7d0842b232',
-  'f0b20938-5bc2-40f3-9e40-df8787146d3d',
-  '8dfc2558-d9a0-4b73-875a-e11aa471664e',
-  '4cf75ca7-be3e-42e3-aa97-a0d8b97b9ef9',
-].map(id => ({ id, url: `https://www.credly.com/badges/${id}/public_url` }));
+  { id: '4cf75ca7-be3e-42e3-aa97-a0d8b97b9ef9', title: 'Google Data Analytics Professional Certificate', issuer: 'Coursera · Google', track: 'Data & analytics' },
+  { id: 'ab02f9d6-d5d2-4a43-a226-8843a3e696c6', title: 'Google AI for App Building', issuer: 'Coursera · Google', track: 'AI & machine learning' },
+  { id: '0ce7b80a-6c8b-4aec-86d0-e8cfd74afe64', title: 'Google AI for App Deployment', issuer: 'Coursera · Google', track: 'AI & machine learning' },
+  { id: 'c4f31e13-830d-4f5c-8190-0b0f3ef9651e', title: 'Google AI for Brainstorming and Planning', issuer: 'Coursera · Google', track: 'AI & machine learning' },
+  { id: 'ccf320ba-f94b-4778-8f64-6d1591e4a42c', title: 'Google AI for Content Creation', issuer: 'Coursera · Google', track: 'AI & machine learning' },
+  { id: 'c2435f72-9a79-4023-943c-e31375f7c5e2', title: 'Google AI for Data Analysis', issuer: 'Coursera · Google', track: 'AI & machine learning' },
+  { id: '558647dc-6754-42fe-a252-f53a8e5fbe23', title: 'Google AI for Research and Insights', issuer: 'Coursera · Google', track: 'AI & machine learning' },
+  { id: '85a8521d-1d01-4050-8181-a4180b9757a2', title: 'Google AI for Writing and Communicating', issuer: 'Coursera · Google', track: 'AI & machine learning' },
+  { id: 'f1bf43f7-4bd3-43d8-9070-2f6d1d190a30', title: 'Google AI Fundamentals', issuer: 'Coursera · Google', track: 'AI & machine learning' },
+  { id: 'dbaa264e-3f95-4ee6-8433-afcaafab4959', title: 'Adobe Certified Professional: Illustrator', issuer: 'Adobe', track: 'Creative & productivity' },
+  { id: '55b759c7-1667-4c7f-8511-7c114f34c9aa', title: 'AWS Educate Introduction to Generative AI', issuer: 'Amazon Web Services', track: 'AI & machine learning' },
+  { id: 'f26ce0a8-3b41-42fd-8913-fc7d0842b232', title: 'AWS Educate Machine Learning Foundations', issuer: 'Amazon Web Services', track: 'AI & machine learning' },
+  { id: 'f0b20938-5bc2-40f3-9e40-df8787146d3d', title: 'Get Started with Looker Skill Badge', issuer: 'Google Cloud', track: 'Data & analytics' },
+  { id: '8dfc2558-d9a0-4b73-875a-e11aa471664e', title: 'Microsoft Office Specialist: Excel Associate (Office 2019)', issuer: 'Microsoft', track: 'Creative & productivity' },
+].map(badge => ({ ...badge, url: `https://www.credly.com/badges/${badge.id}/public_url` }));
 
 export const projects = [
   {

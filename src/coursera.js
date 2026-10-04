@@ -1,4 +1,5 @@
 const file = id => `/assets/certificates/Coursera ${id}.pdf`;
+const preview = id => `/assets/certificates/coursera-previews/${id}.webp`;
 
 export const courseraCertificates = [
   { title: 'Google Data Analytics Professional Certificate', issuer: 'Google', date: 'September 18, 2026', id: '0DH3YSTEC3AV', kind: 'Professional Certificate', track: 'Analytics' },
@@ -24,4 +25,4 @@ export const courseraCertificates = [
   { title: 'Excel Fundamentals for Data Analysis', issuer: 'Macquarie University', date: 'October 2, 2025', id: 'RIPKRPA75RDT', kind: 'Course Certificate', track: 'Productivity' },
   { title: 'Getting Started with Microsoft Word', issuer: 'Coursera', date: 'September 24, 2025', id: 'G9BA796UM008', kind: 'Guided Project', track: 'Productivity' },
   { title: 'Getting Started with Microsoft Office 365', issuer: 'Coursera', date: 'September 25, 2025', id: 'BW4W1VH7EPP1', kind: 'Guided Project', track: 'Productivity' },
-].map(certificate => ({ ...certificate, url: file(certificate.id) }));
+].map(certificate => ({ ...certificate, url: file(certificate.id), preview: preview(certificate.id) }));

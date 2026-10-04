@@ -6,8 +6,8 @@ const extraCredentials = certifications.filter(certificate => certificate.title 
 const courseraTracks = ['All certificates', 'Analytics', 'Artificial intelligence', 'Cloud & IoT', 'Productivity'];
 const badgeTracks = ['Data & analytics', 'AI & machine learning', 'Creative & productivity'];
 const featuredCoursera = [
-  { id: '0DH3YSTEC3AV', track: 'Analytics', badge: 'DA', label: 'FEATURED · DATA ANALYTICS', description: 'Professional training focused on data preparation, analysis, visualization, SQL, and data-driven decisions.' },
-  { id: 'VR0JK91XGZSV', track: 'Artificial intelligence', badge: 'AI', label: 'FEATURED · ARTIFICIAL INTELLIGENCE', description: 'Professional learning in practical AI use for analysis, research, communication, content, and app development.' },
+  { id: '0DH3YSTEC3AV', track: 'Analytics' },
+  { id: 'VR0JK91XGZSV', track: 'Artificial intelligence' },
 ];
 const shortDescription = credential => credential.description || (credential.kind === 'Course Certificate' ? `Course certificate issued by ${credential.issuer}. Focus: ${credential.title}.` : credential.kind === 'Guided Project' ? `Guided project certificate issued by ${credential.issuer}. Focus: ${credential.title}.` : `${credential.kind || 'Professional credential'} issued by ${credential.issuer}, focused on ${credential.track || credential.title}.`);
 
@@ -171,7 +171,7 @@ export default function Certifications() {
       </article>
 
       <div className="other-credentials">
-        <div className="other-credentials-title"><div><p className="kicker">BEYOND COURSERA</p><h3>More credentials</h3></div><span>ALX · KAGGLE</span></div>
+        <div className="other-credentials-title"><div><p className="kicker">BEYOND COURSERA</p><h3>More <em>credentials.</em></h3></div><span>ALX · KAGGLE</span></div>
         <div className="other-credential-grid">
           {extraCredentials.map((credential, index) => <button type="button" className="other-credential-card" data-reveal key={credential.title} onClick={() => setPreview(credential)} aria-label={`Preview ${credential.title}`}>
             <span className="other-credential-image"><img src={credential.image} alt="" loading="lazy" /></span>
@@ -192,16 +192,12 @@ export default function Certifications() {
     <div className="container">
       <div className="section-heading coursera-heading" data-reveal><div><p className="kicker">COURSERA LEARNING</p><h2 id="coursera-certifications-heading">Coursera<br /><em>certificates.</em></h2></div><div className="coursera-count"><span className="coursera-c-mark">C</span><span><b>{courseraCertificates.length} certificates</b><small>Completed learning on Coursera</small></span></div></div>
       <div className="coursera-toolbar"><div className="coursera-filters" role="group" aria-label="Filter Coursera certificates">{courseraTracks.map(track => <button key={track} type="button" className={activeCourseraTrack === track ? 'filter-button active' : 'filter-button'} onClick={() => setActiveCourseraTrack(track)} aria-pressed={activeCourseraTrack === track}>{track}</button>)}</div><span className="visible-count">Showing {visibleCourseraCertificates.length} of {courseraCertificates.length}</span></div>
-      {visibleFeaturedCoursera.length > 0 && <div className="featured-certificates">{visibleFeaturedCoursera.map(featured => <article className="featured-certificate" data-reveal key={featured.id}>
-        <div className="featured-cert-mark" aria-hidden="true"><span>{featured.badge}</span><i>✓</i></div>
-        <div className="featured-cert-copy"><p className="kicker">{featured.label}</p><h3>{featured.certificate.title}</h3><p>{featured.description}</p><div className="featured-cert-meta"><span>{featured.certificate.issuer}</span><span>·</span><time>{featured.certificate.date}</time><span className="featured-cert-id">Certificate ID {featured.certificate.id}</span></div></div>
-        <a className="button button-primary featured-cert-link" href={featured.certificate.url} target="_blank" rel="noreferrer">View Certificate <span>↗</span></a>
-      </article>)}</div>}
-      <div className="coursera-grid">{gridCourseraCertificates.map(certificate => <article className="coursera-card" data-reveal key={certificate.id}>
-        <div className="coursera-card-top"><span className="coursera-wordmark"><i>C</i> Coursera</span><span className="coursera-kind">{certificate.kind}</span></div>
-        <div className="coursera-card-body"><p className="coursera-issuer">{certificate.issuer}</p><h3>{certificate.title}</h3><div className="coursera-date"><span>COMPLETED</span><time>{certificate.date}</time></div></div>
-        <div className="coursera-card-foot"><span className="credential-id">ID&nbsp; {certificate.id}</span><a href={certificate.url} target="_blank" rel="noreferrer" aria-label={`View ${certificate.title} certificate`}>View certificate <span>↗</span></a></div>
-      </article>)}</div>
+      {visibleFeaturedCoursera.length > 0 && <div className="featured-certificates">{visibleFeaturedCoursera.map(featured => <a className="featured-cert-preview" data-reveal key={featured.id} href={featured.certificate.url} target="_blank" rel="noreferrer" aria-label={`Open ${featured.certificate.title} certificate`}>
+        <img src={featured.certificate.preview} alt={`${featured.certificate.title} Coursera certificate`} loading="lazy" />
+      </a>)}</div>}
+      <div className="coursera-grid">{gridCourseraCertificates.map(certificate => <a className="coursera-card" data-reveal key={certificate.id} href={certificate.url} target="_blank" rel="noreferrer" aria-label={`Open ${certificate.title} certificate`}>
+        <img className="coursera-certificate-preview" src={certificate.preview} alt={`${certificate.title} Coursera certificate`} loading="lazy" />
+      </a>)}</div>
     </div>
   </section>
   <section className="section certifications-section credly-certifications" id="digital-badges" aria-labelledby="credly-certifications-heading">

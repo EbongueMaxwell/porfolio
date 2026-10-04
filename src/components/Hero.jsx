@@ -4,13 +4,13 @@ export default function Hero() {
   return <section className="hero" id="home">
     <div className="hero-grid container">
       <div className="hero-copy" data-reveal>
-        <div className="eyebrow">DATA & IT PROFESSIONAL <span className="eyebrow-rule"></span> CAMEROON</div>
+        <div className="eyebrow">GOOGLE DATA ANALYST <span className="eyebrow-rule"></span> IT PROFESSIONAL · CAMEROON</div>
         <h1>Turning data<br />into <em>direction.</em></h1>
         <p className="hero-title">{profile.title} <span>·</span> Cloud Computing</p>
         <p className="hero-intro">I make information useful. From reliable data pipelines and clear dashboards to thoughtful digital products, I help teams see what matters and move forward with confidence.</p>
         <div className="hero-actions">
           <a className="button button-primary" href="#projects">Explore my work <span>↗</span></a>
-          <a className="button button-secondary" href="/Ebongue-CV.pdf" download>Download CV <span>↓</span></a>
+          <a className="button button-secondary" href="/Ebongue%20CV.pdf" download>Download CV <span>↓</span></a>
         </div>
         <div className="hero-meta"><span><i className="pin-dot"></i>{profile.location}</span><span className="meta-divider"></span><a href={`mailto:${profile.email}`}>{profile.email}</a></div>
       </div>

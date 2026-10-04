@@ -1,12 +1,12 @@
 export const profile = {
   name: 'Ebongue Nsame Elie Maxwell',
   firstName: 'Maxwell',
-  title: 'Data & IT Professional',
+  title: 'Google Data Analyst & IT Professional',
   location: 'Nkolfoulou, Yaoundé, Cameroon',
   phone: '+237 655 182 969',
   email: 'nsamemaxwell00@gmail.com',
   linkedin: 'https://www.linkedin.com/in/elie-maxwell-ebongue-nsame-666798302/',
-  summary: 'Data & IT professional with a Cloud Computing background and Google Data Analytics Professional Certificate. Experienced in turning raw data into reliable insights for operational and strategic decisions, with hands-on work across data quality, analysis, KPIs, dashboards, and reporting. Brings together IT management, software development, databases, and practical AI-oriented solutions.',
+  summary: 'Google Data Analyst and IT professional with a Cloud Computing background and Google Data Analytics Professional Certificate. Experienced in turning raw data into reliable insights for operational and strategic decisions, with hands-on work across data quality, analysis, KPIs, dashboards, and reporting. Brings together IT management, software development, databases, and practical AI-oriented solutions.',
 };
 
 export const experiences = [

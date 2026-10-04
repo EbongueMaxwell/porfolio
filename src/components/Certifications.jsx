@@ -10,6 +10,7 @@ const featuredCoursera = [
   { id: 'VR0JK91XGZSV', track: 'Artificial intelligence' },
 ];
 const shortDescription = credential => credential.description || (credential.kind === 'Course Certificate' ? `Course certificate issued by ${credential.issuer}. Focus: ${credential.title}.` : credential.kind === 'Guided Project' ? `Guided project certificate issued by ${credential.issuer}. Focus: ${credential.title}.` : `${credential.kind || 'Professional credential'} issued by ${credential.issuer}, focused on ${credential.track || credential.title}.`);
+const prefersReducedMotion = () => window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches ?? false;
 
 export default function Certifications() {
   const credentials = useMemo(() => linkedinLearningCertificates.map(certificate => ({ ...certificate, source: certificate.issuer.includes('PMI') ? 'PMI®' : 'LinkedIn Learning', type: certificate.kind, category: certificate.track, visual: certificate.issuer.includes('Microsoft') ? 'MS' : certificate.issuer.includes('PMI') ? 'PMI' : 'in' })), []);
@@ -22,7 +23,7 @@ export default function Certifications() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [preview, setPreview] = useState(null);
   const [isPaused, setIsPaused] = useState(false);
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(() => window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  const [reduceMotion, setReduceMotion] = useState(prefersReducedMotion);
   const activeIndexRef = useRef(activeIndex);
   activeIndexRef.current = activeIndex;
   const carouselRef = useRef(null);
@@ -61,10 +62,14 @@ export default function Certifications() {
       viewport.style.setProperty('--credential-slide-width', `${width}px`);
       centerSlide(activeIndexRef.current);
     };
-    const observer = new ResizeObserver(updateSlideWidth);
-    observer.observe(viewport);
+    const observer = typeof ResizeObserver === 'undefined' ? null : new ResizeObserver(updateSlideWidth);
+    observer?.observe(viewport);
+    if (!observer) window.addEventListener('resize', updateSlideWidth);
     updateSlideWidth();
-    return () => observer.disconnect();
+    return () => {
+      observer?.disconnect();
+      if (!observer) window.removeEventListener('resize', updateSlideWidth);
+    };
   }, []);
 
   const startDrag = event => {
@@ -92,14 +97,19 @@ export default function Certifications() {
   }, []);
 
   useEffect(() => {
-    const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const updateMotionPreference = () => setPrefersReducedMotion(motionPreference.matches);
-    motionPreference.addEventListener('change', updateMotionPreference);
-    return () => motionPreference.removeEventListener('change', updateMotionPreference);
+    const motionPreference = window.matchMedia?.('(prefers-reduced-motion: reduce)');
+    if (!motionPreference) return undefined;
+    const updateMotionPreference = () => setReduceMotion(motionPreference.matches);
+    motionPreference.addEventListener?.('change', updateMotionPreference);
+    motionPreference.addListener?.(updateMotionPreference);
+    return () => {
+      motionPreference.removeEventListener?.('change', updateMotionPreference);
+      motionPreference.removeListener?.(updateMotionPreference);
+    };
   }, []);
 
   useEffect(() => {
-    if (isPaused || prefersReducedMotion) return undefined;
+    if (isPaused || reduceMotion) return undefined;
     const timer = window.setInterval(() => {
       const next = (activeIndex + 1) % credentials.length;
       setActiveIndex(next);
@@ -107,7 +117,7 @@ export default function Certifications() {
       centerSlide(next);
     }, 7200);
     return () => window.clearInterval(timer);
-  }, [isPaused, prefersReducedMotion, credentials.length, activeIndex]);
+  }, [isPaused, reduceMotion, credentials.length, activeIndex]);
 
   useEffect(() => () => window.clearTimeout(resumeTimer.current), []);
 

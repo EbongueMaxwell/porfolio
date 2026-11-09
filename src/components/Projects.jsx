@@ -75,9 +75,7 @@ export default function Projects() {
           <span className="project-no">{project.number}</span>
           <span className="art-caption">{project.type}</span>
         </div>
-        <div className="project-content"><p className="kicker">{project.type}</p><h3>{project.title}</h3><p className="project-description">{project.description}</p><p className="project-contribution"><strong>Contribution</strong>{project.contribution}</p><div className="project-tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div>
-          {project.link && <a className="button button-primary" href={project.link} target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()}>View project <span>↗</span></a>}
-        </div>
+        <div className="project-content"><p className="kicker">{project.type}</p><h3>{project.title}</h3><p className="project-description">{project.description}</p><p className="project-contribution"><strong>Contribution</strong>{project.contribution}</p><div className="project-tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div></div>
       </article>;
     })}</div>
   </div></section>;

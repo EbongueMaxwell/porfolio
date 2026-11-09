@@ -16,7 +16,7 @@ export default function Hero() {
       </div>
       <div className="hero-visual" data-reveal aria-label="Portrait and analytics illustration">
         <img className="hero-illustration" src="/assets/illustrations/data-orbit.svg" alt="" aria-hidden="true" />
-        <div className="portrait-frame"><img src="/assets/image/IMG_1904.JPG" alt="Portrait of Maxwell Ebongue" /></div>
+        <div className="portrait-frame"><img src="/MaxwellPicture.png" alt="Portrait of Maxwell Ebongue" /></div>
         <div className="visual-label label-top"><span className="label-icon">⌁</span><span>DATA<br /><b>WITH PURPOSE</b></span></div>
         <div className="visual-label label-bottom"><span className="spark-bars"><i></i><i></i><i></i><i></i><i></i></span><span>INSIGHT<br /><b>IN MOTION</b></span></div>
         <span className="hero-index">01 / 08</span>

@@ -5,6 +5,7 @@ export default function Projects() {
     <div className="section-heading" data-reveal><div><p className="kicker">SELECTED WORK</p><h2>Work that makes<br /><em>an impact.</em></h2></div><span className="section-number">05 — PROJECTS</span></div>
     <div className="projects-grid">{projects.map(project => {
       const isPadesce = project.title === 'PADESCE';
+      const isFireDetection = project.title === 'Fire Detection System';
       const handleProjectClick = () => {
         if (project.link) {
           window.open(project.link, '_blank', 'noopener,noreferrer');
@@ -18,7 +19,7 @@ export default function Projects() {
       };
 
       return <article
-        className={`project-card ${isPadesce ? 'project-card-padesce' : ''}`}
+        className={`project-card ${isPadesce ? 'project-card-padesce' : ''} ${isFireDetection ? 'project-card-fire' : ''}`}
         data-reveal
         key={project.number}
         onClick={project.link ? handleProjectClick : undefined}
@@ -70,6 +71,12 @@ export default function Projects() {
                 <div className="table-row"><span>Center</span><span>74%</span><span>940</span></div>
                 <div className="table-row"><span>South</span><span>68%</span><span>820</span></div>
               </div>
+            </div>
+          ) : project.video ? (
+            <div className="project-media-stack" aria-label="Fire detection project media preview">
+              <span className="project-art-badge">EARLY FIRE DETECTION SYSTEM</span>
+              <img src={project.image} alt="Fire detection system screenshot" loading="lazy" />
+              <video src={project.video} autoPlay muted loop playsInline aria-label="Fire detection demo reel" />
             </div>
           ) : project.image ? <img src={project.image} alt="" loading="lazy" /> : <div className="abstract-graphic" aria-hidden="true"><span></span><span></span><span></span><span></span><i></i><b></b></div>}
           <span className="project-no">{project.number}</span>

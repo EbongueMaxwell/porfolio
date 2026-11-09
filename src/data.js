@@ -105,7 +105,13 @@ export const projects = [
     tags: ['Python', 'Machine Learning', 'FastAPI', 'React', 'PostgreSQL'], image: '/assets/image/dashboard.PNG',
   },
   {
-    number: '03', type: 'IT · BUSINESS SYSTEMS', title: 'Enterprise Management Solutions',
+    number: '03', type: 'IOT · SAFETY · HARDWARE', title: 'Fire Detection System',
+    description: 'An Arduino-based fire and smoke detection solution designed to spot hazards early, trigger alert devices immediately, and strengthen safety in sensitive environments.',
+    contribution: 'Built the system around an Arduino Uno, integrated a smoke sensor with a buzzer, LEDs, and LCD display, and designed the alarm logic to provide fast visual and audible alerts when smoke levels exceed safe thresholds.',
+    tags: ['Arduino Uno', 'Smoke detection', 'Safety systems', 'Embedded electronics'], image: '/Screenshot_20250113-100520.png', video: '/PXL_20240429_223838765_exported_1794260831317.mp4',
+  },
+  {
+    number: '04', type: 'IT · BUSINESS SYSTEMS', title: 'Enterprise Management Solutions',
     description: 'Digital and IT initiatives at Naumur SARL, including Projet Perle, a personnel and remuneration management solution.',
     contribution: 'Contributed to data management and internal digital solutions, alongside concepts and prototypes for task and personnel management, school management, intranets, digital archives, and AI-enabled business applications.',
     tags: ['Full-stack development', 'Databases', 'Process automation', 'Cloud principles'], image: null,

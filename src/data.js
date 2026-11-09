@@ -4,8 +4,10 @@ export const profile = {
   title: 'Google Data Analyst & IT Professional',
   location: 'Nkolfoulou, Yaoundé, Cameroon',
   phone: '+237 655 182 969',
+  whatsapp: 'https://wa.me/237620908432',
   email: 'nsamemaxwell00@gmail.com',
   linkedin: 'https://www.linkedin.com/in/elie-maxwell-ebongue-nsame-666798302/',
+  github: 'https://github.com/EbongueMaxwell/',
   summary: 'Google Data Analyst and IT professional with a Cloud Computing background and Google Data Analytics Professional Certificate. Experienced in turning raw data into reliable insights for operational and strategic decisions, with hands-on work across data quality, analysis, KPIs, dashboards, and reporting. Brings together IT management, software development, databases, and practical AI-oriented solutions.',
 };
 
@@ -94,6 +96,7 @@ export const projects = [
     description: 'National project data work supporting the monitoring of training programs, revealing trends and gaps, and evidence-based decisions.',
     contribution: 'Data collection, consolidation, validation, cleaning, preprocessing, analysis, KPI monitoring, dashboards, and reporting.',
     tags: ['Data quality', 'KPIs', 'Dashboards', 'Reporting'], image: null,
+    link: 'https://call.naumur.com/',
   },
   {
     number: '02', type: 'AI · CREDIT RISK · SOFTWARE', title: 'AI Credit Risk Analysis & Scoring',
